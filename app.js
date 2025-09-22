@@ -1,17 +1,9 @@
-// ======================================
-// SkillSwap App.js - Supabase Version
-// ======================================
 
-// ------------------
-// Supabase Setup
-// ------------------
 const SUPABASE_URL = "https://fkpoitotkcsmcazmwnrv.supabase.co"; // replace with your URL
 const SUPABASE_KEY ="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZrcG9pdG90a2NzbWNhem13bnJ2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTg0NTIwNzksImV4cCI6MjA3NDAyODA3OX0._4oz8G569sVv2pKS_uPR-0bAsWv3YpVyNRrb1Ki1qDk"; // anon key
 const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
-// ------------------
-// Elements
-// ------------------
+
 const form = document.getElementById("skillForm");
 const skillsList = document.getElementById("skillsList");
 const searchInput = document.getElementById("searchInput");
@@ -20,9 +12,7 @@ const matchBtn = document.getElementById("matchBtn");
 
 const matchesList = document.getElementById("matchesList");
 
-// ------------------
-// Escape HTML
-// ------------------
+
 function escapeHtml(str) {
   if (typeof str !== "string") return "";
   return str
@@ -33,9 +23,7 @@ function escapeHtml(str) {
     .replaceAll("'", "&#039;");
 }
 
-// ------------------
-// Add Skill
-// ------------------
+
 if (form) {
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
@@ -65,9 +53,7 @@ if (form) {
   });
 }
 
-// ------------------
-// Browse / Search Skills
-// ------------------
+
 async function renderSkills(filter = "") {
   if (!skillsList) return;
   const { data: skills, error } = await supabase.from("skills").select("*");
@@ -119,14 +105,14 @@ async function renderSkills(filter = "") {
   });
 }
 
-// Search input
+
 if (searchInput) {
   searchInput.addEventListener("input", (e) =>
     renderSkills(e.target.value || "")
   );
 }
 
-// Clear all
+
 if (clearBtn) {
   clearBtn.addEventListener("click", async () => {
     if (!confirm("Clear all skills?")) return;
@@ -137,12 +123,10 @@ if (clearBtn) {
   });
 }
 
-// Initial render
+
 if (skillsList) renderSkills();
 
-// ------------------
-// Match Logic
-// ------------------
+
 async function renderMatches() {
   if (!matchesList) return;
   const { data: skills, error } = await supabase.from("skills").select("*");
@@ -186,7 +170,7 @@ async function renderMatches() {
   }
 }
 
-// Match button
+
 if (matchBtn) {
   matchBtn.addEventListener("click", renderMatches);
 }
