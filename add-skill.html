@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Add Skill - SkillSwap</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen bg-gradient-to-r from-indigo-300 via-purple-200 to-pink-200 flex items-center justify-center p-6">
+
+  <div class="bg-white bg-opacity-80 backdrop-blur-md p-8 rounded-2xl shadow-2xl w-full max-w-md">
+    <h1 class="text-3xl font-bold text-indigo-800 mb-6 text-center">Add Your Skills</h1>
+
+    <!-- Add Skill Form -->
+    <form id="skillForm" class="space-y-4">
+      <input type="text" id="name" placeholder="Your Name" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-400">
+      <input type="email" id="email" placeholder="Your Email" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-400">
+      <input type="text" id="year" placeholder="Your Year/Department" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-400">
+      <input type="text" id="teach" placeholder="Skill you can teach" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-400">
+      <input type="text" id="learn" placeholder="Skill you want to learn" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-400">
+      <button type="submit" class="bg-blue-500 text-white px-6 py-3 rounded-lg w-full shadow hover:bg-blue-600 transition">
+        Save Skill
+      </button>
+    </form>
+
+    <!-- Back to Home -->
+    <div class="mt-6 text-center">
+      <a href="index.html" class="text-blue-600 font-medium">⬅ Back to Home</a>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="app.js"></script>
+</body>
+</html>

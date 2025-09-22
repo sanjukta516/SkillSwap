@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Matches - SkillSwap</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen bg-gradient-to-r from-indigo-300 via-purple-200 to-pink-200 flex items-center justify-center p-6">
+
+  <div class="bg-white bg-opacity-80 backdrop-blur-md p-8 rounded-2xl shadow-2xl text-center max-w-2xl w-full">
+    <h1 class="text-3xl font-bold text-indigo-800 mb-6">Skill Matches</h1>
+
+    <!-- Find Matches Button -->
+    <button id="matchBtn" class="bg-purple-500 text-white px-6 py-3 rounded-lg mb-6 shadow hover:bg-purple-600 transition">
+      Find Matches
+    </button>
+
+    <!-- Matches List -->
+    <div id="matchesList" class="space-y-4 text-left"></div>
+
+    <!-- Back to Home -->
+    <div class="mt-6">
+      <a href="index.html" class="text-blue-600 font-medium">⬅ Back to Home</a>
+    </div>
+  </div>
+
+  <!-- 1️⃣ Load Supabase first -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+  <!-- 2️⃣ Then load your app.js -->
+  <script src="app.js"></script>
+</body>
+</html>
+

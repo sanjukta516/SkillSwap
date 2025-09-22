@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Browse Skills - SkillSwap</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen bg-gradient-to-r from-indigo-300 via-purple-200 to-pink-200 flex items-center justify-center">
+
+  <div class="bg-white bg-opacity-80 backdrop-blur-md p-8 rounded-2xl shadow-2xl text-center max-w-2xl w-full">
+    <!-- Heading -->
+    <h1 class="text-3xl font-bold text-indigo-800 mb-6">Browse Skills</h1>
+
+    <!-- Search Bar -->
+    <input 
+      id="searchInput" 
+      type="text" 
+      placeholder="Search name, skills" 
+      class="w-full p-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-indigo-400 mb-6"
+    >
+
+    <!-- Skills List -->
+    <div id="skillsList" class="space-y-4 text-left"></div>
+
+    <!-- Clear Button -->
+    <button id="clearBtn" class="mt-6 px-6 py-2 bg-red-500 text-white rounded-lg shadow hover:bg-red-600 transition">
+      Clear All
+    </button>
+
+    <div class="mt-6">
+      <a href="index.html" class="text-blue-600 font-medium">⬅ Back to Home</a>
+    </div>
+  </div>
+   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+  <script src="app.js"></script>
+</body>
+</html>
